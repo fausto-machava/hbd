@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{ 
+    background-color: #010101;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.App{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    min-width: 80vw;
+    align-items: center;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+span{
+    display: none;
+}
+
+input{
+    padding: 12px 16px;
+    flex: 1;
+    width: 50vw;
+}

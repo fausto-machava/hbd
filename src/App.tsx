@@ -2,9 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 
 function App() {
-  const [rep1, setRep1] = useState()
-  const [rep2, setRep2] = useState()
-  const [rep3, setRep3] = useState()
+  const [rep1, setRep1] = useState<string>('')
+  const [rep2, setRep2] = useState<string>('')
+  const [rep3, setRep3] = useState<string>()
 
   return (
     <div className="App">
@@ -14,7 +14,7 @@ function App() {
       <div className='form'>
         <div className='input'>
           <input onChange={(event: React.FormEvent<HTMLInputElement>) => setRep1(event.currentTarget.value)} type="number" placeholder='Qual foi a primeira vez em que te pedi em Namoro(O dia) '/>
-          {rep1 == 9 ? 'Resposta certa! A dica é: Atras do que toca mas não esta ligado' : 'Resposta incorrecta, tente novamente'}
+          {rep1 == '9' ? 'Resposta certa! A dica é: Atras do que toca mas não esta ligado' : 'Resposta incorrecta, tente novamente'}
         </div>
 
         <div className='input'>
@@ -24,7 +24,7 @@ function App() {
 
         <div className='input'>
           <input onChange={(event: React.FormEvent<HTMLInputElement>) => setRep3(event.currentTarget.value)} type="number" placeholder='Dia do primeiro beijo?' />
-          {rep3 == 18 ? 'Resposta certa! A dica é: No local onde eu gosto de me limpar.' : 'Resposta incorrecta, tente novamente'}
+          {rep3 == '18' ? 'Resposta certa! A dica é: No local onde eu gosto de me limpar.' : 'Resposta incorrecta, tente novamente'}
           <span>18</span>
         </div>
       </div>
